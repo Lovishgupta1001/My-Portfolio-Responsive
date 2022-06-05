@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250;
+    --hue-color: 215;
     /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
@@ -166,10 +166,7 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-.lovish-logo{
-   width: 100px;
-   height: auto ;
-}
+
 .nav__logo,
 .nav__toggle {
     color: var(--title-color);
@@ -284,12 +281,12 @@ img {
 
 .home__blob {
     width: 200px;
-    fill: var(--first-color);
+    fill: var(--first-color)
 }
 
 .home__blob-img {
-    width: 250px;
-    height: 250px;
+    width: 170px;
+    height: 170px;
 }
 
 .home__data {
@@ -495,15 +492,12 @@ img {
     width: 50%;
 }
 
-.skills__NodeJs {
+.skills__django {
     width: 25%;
 }
 
 .skills__ds {
     width: 100%;
-}
-.skills__Corel {
-   width: 50%;
 }
 
 .skills__close .skills__list {
