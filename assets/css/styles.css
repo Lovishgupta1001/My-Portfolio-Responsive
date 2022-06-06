@@ -68,6 +68,9 @@
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
     }
+    .uil-times{
+        display: none;
+    }
 }
 
 /*========== Variables Dark theme ==========*/
