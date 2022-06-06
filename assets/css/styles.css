@@ -387,7 +387,9 @@ img {
     margin-bottom: var(--mb-2-5);
 
 }
-
+.my-name{
+    color: var(--first-color);
+}
 .about__info {
     display: flex;
     justify-content: space-evenly;
