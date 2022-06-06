@@ -377,7 +377,7 @@ img {
 /*==================== ABOUT ====================*/
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin: auto;
   }
@@ -516,7 +516,7 @@ img {
 
 .skills__arrow {
     margin-left: auto;
-    transition.4s: ;
+    transition: 0.4s;
 }
 
 .skills__list {
