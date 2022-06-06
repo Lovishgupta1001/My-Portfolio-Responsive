@@ -129,7 +129,33 @@
           <h2 class="section__title">About Me</h2>
           <span class="section__subtitle">Introduction</span>
           <div class="about__container container grid">
-              <img src="assets/img/about-section pic.jpg" alt="" class="about__img">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <img src="assets/img/img1.jpg" alt="" class="about__img">
+                </div>
+            
+                <div class="mySlides fade">
+                <img src="assets/img/img2.jpg" alt="" class="about__img">
+                </div>
+            
+                <div class="mySlides fade">
+                <img src="assets/img/img3.jpg" alt="" class="about__img">
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
               <div class="about__data">
                   <p class="about__description">I am <span class="my-name">Lovish Gupta</span>, currently pursuing MCA from Motilal Nehru National
                       Institute of Technology,Allahabad.<br><br>
