@@ -170,6 +170,7 @@ img {
     align-items: center;
 }
 .lovish-logo{
+   padding: 10px;
    width: 100px;
    height: auto ;
 }
@@ -798,7 +799,7 @@ img {
     font-size: var(--smaller-font-size);
     text-align: center;
     color: var(--text-color-light);
-    margin-top: var(--mb-3);
+    margin-top: var(--mb-2);
 }
 
 .footer__title,
