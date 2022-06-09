@@ -1,4 +1,4 @@
-<?php 
+<?php include_once("index.html");
 //get data from form  
 
 $name = $_POST['name'];
@@ -13,4 +13,5 @@ if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }
 //redirect
+header("Location:thankyou.html");
 ?>
