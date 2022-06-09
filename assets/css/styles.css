@@ -317,6 +317,10 @@ img {
 .home__description {
     margin-bottom: var(--mb-2);
 }
+span.\.f-word{
+    color: var(--first-color);
+    font-weight: bold;
+}
 
 .home__scroll {
     display: none;
