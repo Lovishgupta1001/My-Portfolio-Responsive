@@ -1,4 +1,4 @@
-<?php
+<?php include_once("index.html");
 //get data from form  
 
 $name = $_POST['name'];
