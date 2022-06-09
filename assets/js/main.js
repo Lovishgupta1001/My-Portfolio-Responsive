@@ -29,6 +29,31 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+/*==================== Changing Tetx Automatically in Home Section ====================*/
+// TYPING ANIMATION SCRIPT
+var typed= new Typed("#words", {
+    strings: [
+        "Student at MNNIT",
+        "Technocrat",
+        "Programmer",
+        "Developer",
+        "Happy Person"
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
+// (function (){
+//     var words= 
+//     i=0;
+//     setInterval(function(){
+//         $('#words').fadeOut(function(){
+//             $(this).html(words[(i=(i+1) % words.length)]).fadeOut();
+//         });
+//     },1000)
+// })
+
+
 
 /*==================== ABOUT PHOTO SLIDER ====================*/
 // MANUAL SLIDE
