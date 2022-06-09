@@ -37,9 +37,10 @@ var typed= new Typed("#words", {
         "Technocrat",
         "Programmer",
         "Developer",
-        "Happy Person"
+        "Tech Enthusiast",
+        "Learner"
     ],
-    typeSpeed: 100,
+    typeSpeed: 200,
     backSpeed: 60,
     loop: true
 });
