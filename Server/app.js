@@ -27,14 +27,18 @@ app.post('/send-email', upload.none(), (request, response) => {
         port: 587,
         secure: false,
         auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD,
+            // user: process.env.EMAIL,
+            // pass: process.env.PASSWORD,
+            user: 'lovishgupta1001@gmail.com',
+            pass: 'ivriamgbuqnncwoe',
         },
     });
 
     const mailOptions = {
-        from: process.env.FROM,
-        to: process.env.TO,
+        // from: process.env.FROM,
+        // to: process.env.TO,
+        from: 'lovishgupta1001@gmail.com',
+        to: 'lovishgupta1001@gmail.com',
         subject: 'Enquiry Mail',
         html: `<h2>Dear Lovish</h2><br>
             You have received a new enquiry from:<br>
