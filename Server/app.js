@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const multer = require('multer');
 const nodemailer = require('nodemailer');
-const path = require('path'); // Add the 'path' module
 
 const app = express();
 dotenv.config();
@@ -12,21 +11,53 @@ app.use(express.static('public'));
 const upload = multer();
 
 app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, '/index.html')); // Set the path of index.html
+    response.sendFile('/index.html');
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post('/send-email', upload.none(), (request, response) => {
-    // ...
+    const name = request.body.name;
+    const email = request.body.email;
+    const message = request.body.message;
+
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
+        },
+    });
+
+    const mailOptions = {
+        from: 'lovishgupta1001@gmail.com',
+        to: 'lovishgupta1001@gmail.com',
+        subject: 'Enquiry Mail',
+        html: `<h2>Dear Lovish</h2><br>
+            You have received a new enquiry from:<br>
+            <b>Name: ${name}</b>,<br>
+            <b>Email: ${email}</b>,<br>
+            <b>Message: ${message}</b>,<br>
+        `,
+    };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            // ...
+            console.log('Error occurred:', error.message);
+            response.status(500).json({
+                status: false,
+                message: 'An error occurred while sending the email.',
+            });
         } else {
             console.log('Email Sent' + info.response);
-            return response.redirect('/thankyou.html'); // Set the path of thankyou.html
+            // response.status(200).json({
+            //     status: true,
+            //     message: 'Email sent successfully!',
+            // });
+            return response.redirect('/thankyou.html');
         }
     });
 });
